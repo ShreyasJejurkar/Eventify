@@ -16,3 +16,5 @@ You should install [Eventify with NuGet](https://www.nuget.org/packages/Eventify
 Or via the .NET Core command line interface:
 
     dotnet add package Eventify
+
+Please see [wiki](https://github.com/MCCshreyas/Eventify/wiki) section for examples. 
