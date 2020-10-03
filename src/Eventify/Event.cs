@@ -8,9 +8,9 @@ namespace Eventify
     public abstract class Event
     {
         /// <summary>
-        /// <see cref="DateTimeOffset"/> when given <see cref="Event"/> occured.
+        /// <see cref="DateTimeOffset"/> when given <see cref="Event"/> occurred.
         /// </summary>
-        public DateTimeOffset EventOccuredAt { get; }
+        public DateTimeOffset EventOccurredAt { get; }
 
         /// <summary>
         /// Unique Event Id that represents an <see cref="Event"/>
@@ -20,7 +20,7 @@ namespace Eventify
         protected Event()
         {
             EventId = Guid.NewGuid();
-            EventOccuredAt = DateTimeOffset.UtcNow;
+            EventOccurredAt = DateTimeOffset.UtcNow;
         }
     }
 }

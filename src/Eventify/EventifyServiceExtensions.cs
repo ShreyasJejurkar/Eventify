@@ -13,7 +13,7 @@ namespace Eventify.Extensions.Microsoft.DependencyInjection
             {
                 throw new Exception("Please provide at least one assembly to scan for EventHandlers");
             }
-            
+
             foreach (var assembly in assemblies)
             {
                 var classTypes = assembly.GetTypes().Select(t => t.GetTypeInfo()).Where(t => t.IsClass && !t.IsAbstract);
@@ -29,7 +29,6 @@ namespace Eventify.Extensions.Microsoft.DependencyInjection
                     }
                 }
             }
-
             services.AddScoped<IEventPublisher, InMemoryEventPublisher>();
         }
     }
