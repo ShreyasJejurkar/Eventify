@@ -9,7 +9,7 @@ namespace Eventify
     /// </summary>
     public class EventPublishingContext
     {
-        protected object _eventData;
+        private object _eventData;
 
         /// <summary>
         /// Id of currently published <see cref="Event"/>

@@ -56,7 +56,7 @@ namespace Eventify
                 }
                 catch (Exception e)
                 {
-                    publishedContext.SetException(e, handler.GetType());
+                    publishedContext.SetException(e);
                     publishedContext.SetEventData(eventPublishingContext.GetEventData());
                 }
             }

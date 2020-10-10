@@ -16,7 +16,8 @@ namespace Eventify.Extensions.Microsoft.DependencyInjection
 
             foreach (var assembly in assemblies)
             {
-                var classTypes = assembly.GetTypes().Select(t => t.GetTypeInfo()).Where(t => t.IsClass && !t.IsAbstract);
+                var classTypes = assembly.GetTypes().Select(t => t.GetTypeInfo())
+                    .Where(t => t.IsClass && !t.IsAbstract);
 
                 foreach (var type in classTypes)
                 {
@@ -29,6 +30,7 @@ namespace Eventify.Extensions.Microsoft.DependencyInjection
                     }
                 }
             }
+
             services.AddScoped<IEventPublisher, InMemoryEventPublisher>();
         }
     }

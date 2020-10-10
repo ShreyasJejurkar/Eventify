@@ -13,28 +13,18 @@ namespace Eventify
         /// <summary>
         /// Represents the does exception occurred while publishing event or not 
         /// </summary>
-        public bool IsFaulted => EventExceptionList.Count != 0;
+        public bool IsFaulted => EventException != null;
 
-        /// <summary>
-        /// This will contain occurred exception information for further logging or processing
-        /// </summary>
-        public List<Exception> EventExceptionList { get; }
+        public Exception EventException { get; private set; }
 
-        /// <summary>
-        /// Type of handler in which <see cref="Exception"/> has been thrown-ed
-        /// </summary>
-        public List<Type> ExceptionHandlerTypeList { get; }
-
-        internal EventPublishedContext(Guid eventId, string eventName, Type eventType) : base(eventId, eventName, eventType)
+        internal EventPublishedContext(Guid eventId, string eventName, Type eventType)
+            : base(eventId, eventName, eventType)
         {
-            EventExceptionList = new List<Exception>();
-            ExceptionHandlerTypeList = new List<Type>();
         }
 
-        internal void SetException(Exception e, Type handlerExceptionType)
+        internal void SetException(Exception e)
         {
-            EventExceptionList.Add(e);
-            ExceptionHandlerTypeList.Add(handlerExceptionType);
+            EventException = e;
         }
     }
 }

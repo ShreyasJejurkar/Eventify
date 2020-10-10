@@ -1,7 +1,7 @@
 ﻿namespace Eventify
 {
     /// <summary>
-    /// Contract for Event listeners 
+    /// Contract for Event publisher listeners 
     /// </summary>
     public interface IEventPublisherListener
     {
