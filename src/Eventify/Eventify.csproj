@@ -9,9 +9,9 @@
         <Copyright>Copyright Shreyas Jejurkar</Copyright>
         <PackageTags>event, eventhandler, domain events</PackageTags>
         <PackageReleaseNotes>First release</PackageReleaseNotes>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-        <FileVersion>1.0.0.0</FileVersion>
+        <FileVersion>1.1.0.0</FileVersion>
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>Eventify.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
